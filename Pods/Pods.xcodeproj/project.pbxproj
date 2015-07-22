@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D38B457C98F86CC70A44C77 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CE77A78F60A27AE5BC26D4 /* MobileCoreServices.framework */; };
+		240B5FB03AC177756C59EAC9 /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F67E33A84A3872061955E00 /* FLAnimatedImageView.h */; };
+		379F38ABCE4F8CD22A88EFEF /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DFAA148976206DAED781284 /* FLAnimatedImage.h */; };
+		4D214B750A5B8067A66042CB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BEED24F3190F834C9672D5 /* QuartzCore.framework */; };
+		5A607C828A28C15E2F481E5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503DB61CED0B40D8D01F70AC /* Foundation.framework */; };
+		716F65634DDAD30B9B2F87C6 /* Pods-Hiragana-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4CF1CE2C6C4FB582A2B03F /* Pods-Hiragana-dummy.m */; };
+		B57712A05E85274E298E81BA /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C1DA285D75B81FF61BF338 /* FLAnimatedImage.m */; };
+		D6E91FC1E8A546181B8C25AF /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BD508409C7C319FF326DD4 /* ImageIO.framework */; };
+		E921384BC0D1D0F14893193C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC86532C10D7C3DF75264F7 /* CoreGraphics.framework */; };
+		F7F3802C6C8711C241D8941C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503DB61CED0B40D8D01F70AC /* Foundation.framework */; };
+		FBE74ED369DF58DF92A486B0 /* Pods-Hiragana-FLAnimatedImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A35489FE97E402F8C05F25 /* Pods-Hiragana-FLAnimatedImage-dummy.m */; };
+		FD2C781166D2F4B7E9F8B13A /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F7BC293BD0F318051DEB0B /* FLAnimatedImageView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8836845B7A27A20E628A687E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F432323105009DF7B3BD47CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 348E3D8C3AC71CE58D6F25CF;
+			remoteInfo = "Pods-Hiragana-FLAnimatedImage";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		093B46EC2DE8F54E83DF7F80 /* Pods-Hiragana-FLAnimatedImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hiragana-FLAnimatedImage.xcconfig"; sourceTree = "<group>"; };
+		12F7BC293BD0F318051DEB0B /* FLAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImageView.m; path = FLAnimatedImageDemo/FLAnimatedImage/FLAnimatedImageView.m; sourceTree = "<group>"; };
+		23BEED24F3190F834C9672D5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		28C1DA285D75B81FF61BF338 /* FLAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImage.m; path = FLAnimatedImageDemo/FLAnimatedImage/FLAnimatedImage.m; sourceTree = "<group>"; };
+		380ECE58B9EAA03DCEDA13F0 /* Pods-Hiragana-FLAnimatedImage-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hiragana-FLAnimatedImage-Private.xcconfig"; sourceTree = "<group>"; };
+		38BD508409C7C319FF326DD4 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		485D1FE72B239AFA8737E68D /* libPods-Hiragana.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hiragana.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		503DB61CED0B40D8D01F70AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		52BE5966F8A0825377D3C8F2 /* Pods-Hiragana-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Hiragana-environment.h"; sourceTree = "<group>"; };
+		56CE77A78F60A27AE5BC26D4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		59FFCFCE46D49E513AFC58C9 /* Pods-Hiragana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hiragana.debug.xcconfig"; sourceTree = "<group>"; };
+		666FDA4C3C6D7C46EF630629 /* Pods-Hiragana-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Hiragana-acknowledgements.plist"; sourceTree = "<group>"; };
+		6B4CF1CE2C6C4FB582A2B03F /* Pods-Hiragana-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Hiragana-dummy.m"; sourceTree = "<group>"; };
+		6CC86532C10D7C3DF75264F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		7861B5B8D69B9E32DC73F8AB /* Pods-Hiragana-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Hiragana-resources.sh"; sourceTree = "<group>"; };
+		8DFAA148976206DAED781284 /* FLAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImage.h; path = FLAnimatedImageDemo/FLAnimatedImage/FLAnimatedImage.h; sourceTree = "<group>"; };
+		8F67E33A84A3872061955E00 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImageView.h; path = FLAnimatedImageDemo/FLAnimatedImage/FLAnimatedImageView.h; sourceTree = "<group>"; };
+		A8449D5173971DDC77210F80 /* Pods-Hiragana-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Hiragana-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BA689F2D57900ECF82405927 /* Pods-Hiragana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Hiragana.release.xcconfig"; sourceTree = "<group>"; };
+		C63F42AD66C07C78ABD44F56 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E0A35489FE97E402F8C05F25 /* Pods-Hiragana-FLAnimatedImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Hiragana-FLAnimatedImage-dummy.m"; sourceTree = "<group>"; };
+		EFF8E30EF0BA191D90A5DFFA /* libPods-Hiragana-FLAnimatedImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hiragana-FLAnimatedImage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E857C99B3C2D612F787A39 /* Pods-Hiragana-FLAnimatedImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Hiragana-FLAnimatedImage-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		028A730D8AA18DB5767DB88D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A607C828A28C15E2F481E5C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D84A7547DD4381700E251AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E921384BC0D1D0F14893193C /* CoreGraphics.framework in Frameworks */,
+				F7F3802C6C8711C241D8941C /* Foundation.framework in Frameworks */,
+				D6E91FC1E8A546181B8C25AF /* ImageIO.framework in Frameworks */,
+				0D38B457C98F86CC70A44C77 /* MobileCoreServices.framework in Frameworks */,
+				4D214B750A5B8067A66042CB /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FC6C99021BFCE89E51CC326 = {
+			isa = PBXGroup;
+			children = (
+				C63F42AD66C07C78ABD44F56 /* Podfile */,
+				E7CCC45C8FD92A676DCC36C4 /* Frameworks */,
+				A892FC521329433B0B8BCF2A /* Pods */,
+				898B381BBB3AB5C23BB17D5C /* Products */,
+				76DB517A6C1063513681FC67 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		3173538096B06CAFF248F4C5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				093B46EC2DE8F54E83DF7F80 /* Pods-Hiragana-FLAnimatedImage.xcconfig */,
+				380ECE58B9EAA03DCEDA13F0 /* Pods-Hiragana-FLAnimatedImage-Private.xcconfig */,
+				E0A35489FE97E402F8C05F25 /* Pods-Hiragana-FLAnimatedImage-dummy.m */,
+				F9E857C99B3C2D612F787A39 /* Pods-Hiragana-FLAnimatedImage-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Hiragana-FLAnimatedImage";
+			sourceTree = "<group>";
+		};
+		76DB517A6C1063513681FC67 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				93DD5F57D34E601352E38EE3 /* Pods-Hiragana */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		85D1037806AF67B196C8DAF3 /* FLAnimatedImage */ = {
+			isa = PBXGroup;
+			children = (
+				8DFAA148976206DAED781284 /* FLAnimatedImage.h */,
+				28C1DA285D75B81FF61BF338 /* FLAnimatedImage.m */,
+				8F67E33A84A3872061955E00 /* FLAnimatedImageView.h */,
+				12F7BC293BD0F318051DEB0B /* FLAnimatedImageView.m */,
+				3173538096B06CAFF248F4C5 /* Support Files */,
+			);
+			path = FLAnimatedImage;
+			sourceTree = "<group>";
+		};
+		898B381BBB3AB5C23BB17D5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				485D1FE72B239AFA8737E68D /* libPods-Hiragana.a */,
+				EFF8E30EF0BA191D90A5DFFA /* libPods-Hiragana-FLAnimatedImage.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93DD5F57D34E601352E38EE3 /* Pods-Hiragana */ = {
+			isa = PBXGroup;
+			children = (
+				A8449D5173971DDC77210F80 /* Pods-Hiragana-acknowledgements.markdown */,
+				666FDA4C3C6D7C46EF630629 /* Pods-Hiragana-acknowledgements.plist */,
+				6B4CF1CE2C6C4FB582A2B03F /* Pods-Hiragana-dummy.m */,
+				52BE5966F8A0825377D3C8F2 /* Pods-Hiragana-environment.h */,
+				7861B5B8D69B9E32DC73F8AB /* Pods-Hiragana-resources.sh */,
+				59FFCFCE46D49E513AFC58C9 /* Pods-Hiragana.debug.xcconfig */,
+				BA689F2D57900ECF82405927 /* Pods-Hiragana.release.xcconfig */,
+			);
+			name = "Pods-Hiragana";
+			path = "Target Support Files/Pods-Hiragana";
+			sourceTree = "<group>";
+		};
+		A892FC521329433B0B8BCF2A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85D1037806AF67B196C8DAF3 /* FLAnimatedImage */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E7CCC45C8FD92A676DCC36C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCBE00F022F36BE318C65130 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCBE00F022F36BE318C65130 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6CC86532C10D7C3DF75264F7 /* CoreGraphics.framework */,
+				503DB61CED0B40D8D01F70AC /* Foundation.framework */,
+				38BD508409C7C319FF326DD4 /* ImageIO.framework */,
+				56CE77A78F60A27AE5BC26D4 /* MobileCoreServices.framework */,
+				23BEED24F3190F834C9672D5 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		61D010D0F9E6B44159E44582 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				379F38ABCE4F8CD22A88EFEF /* FLAnimatedImage.h in Headers */,
+				240B5FB03AC177756C59EAC9 /* FLAnimatedImageView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		348E3D8C3AC71CE58D6F25CF /* Pods-Hiragana-FLAnimatedImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01FE74098AC53921E2D3E490 /* Build configuration list for PBXNativeTarget "Pods-Hiragana-FLAnimatedImage" */;
+			buildPhases = (
+				CCC8A3B49B4A4DA4B8B34DAE /* Sources */,
+				5D84A7547DD4381700E251AA /* Frameworks */,
+				61D010D0F9E6B44159E44582 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Hiragana-FLAnimatedImage";
+			productName = "Pods-Hiragana-FLAnimatedImage";
+			productReference = EFF8E30EF0BA191D90A5DFFA /* libPods-Hiragana-FLAnimatedImage.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7AFB80DA816238BC90334FDE /* Pods-Hiragana */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16DA4A28384DBC442D3B98A0 /* Build configuration list for PBXNativeTarget "Pods-Hiragana" */;
+			buildPhases = (
+				EFFA9B121110CB38E65F3F0D /* Sources */,
+				028A730D8AA18DB5767DB88D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95A77EF3A4812DD1D287FC46 /* PBXTargetDependency */,
+			);
+			name = "Pods-Hiragana";
+			productName = "Pods-Hiragana";
+			productReference = 485D1FE72B239AFA8737E68D /* libPods-Hiragana.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F432323105009DF7B3BD47CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 4861A9B2CF8EC8BB9EAF4823 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2FC6C99021BFCE89E51CC326;
+			productRefGroup = 898B381BBB3AB5C23BB17D5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7AFB80DA816238BC90334FDE /* Pods-Hiragana */,
+				348E3D8C3AC71CE58D6F25CF /* Pods-Hiragana-FLAnimatedImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCC8A3B49B4A4DA4B8B34DAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B57712A05E85274E298E81BA /* FLAnimatedImage.m in Sources */,
+				FD2C781166D2F4B7E9F8B13A /* FLAnimatedImageView.m in Sources */,
+				FBE74ED369DF58DF92A486B0 /* Pods-Hiragana-FLAnimatedImage-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFFA9B121110CB38E65F3F0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				716F65634DDAD30B9B2F87C6 /* Pods-Hiragana-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95A77EF3A4812DD1D287FC46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Hiragana-FLAnimatedImage";
+			target = 348E3D8C3AC71CE58D6F25CF /* Pods-Hiragana-FLAnimatedImage */;
+			targetProxy = 8836845B7A27A20E628A687E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		474A8059E28B3BBD36E17D38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		61EF4C63A4A34EF1B2D8B00E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 380ECE58B9EAA03DCEDA13F0 /* Pods-Hiragana-FLAnimatedImage-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Hiragana-FLAnimatedImage/Pods-Hiragana-FLAnimatedImage-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8878FF69CC29F6B496247CC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 380ECE58B9EAA03DCEDA13F0 /* Pods-Hiragana-FLAnimatedImage-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Hiragana-FLAnimatedImage/Pods-Hiragana-FLAnimatedImage-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A0DB34E1FC82AE2E5609C1B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA689F2D57900ECF82405927 /* Pods-Hiragana.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B7055916ECE6C95B397E019F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D016F6326316EE06F5C8AA45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59FFCFCE46D49E513AFC58C9 /* Pods-Hiragana.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01FE74098AC53921E2D3E490 /* Build configuration list for PBXNativeTarget "Pods-Hiragana-FLAnimatedImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61EF4C63A4A34EF1B2D8B00E /* Debug */,
+				8878FF69CC29F6B496247CC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16DA4A28384DBC442D3B98A0 /* Build configuration list for PBXNativeTarget "Pods-Hiragana" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D016F6326316EE06F5C8AA45 /* Debug */,
+				A0DB34E1FC82AE2E5609C1B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4861A9B2CF8EC8BB9EAF4823 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				474A8059E28B3BBD36E17D38 /* Debug */,
+				B7055916ECE6C95B397E019F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F432323105009DF7B3BD47CF /* Project object */;
+}
