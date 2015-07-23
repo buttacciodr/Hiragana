@@ -14,5 +14,6 @@
 
 @property (copy, nonatomic, readonly) NSString *symbol;
 @property (copy, nonatomic, readonly) NSString *gifPath;
+@property (copy, nonatomic, readonly) NSURL *audioURL;
 
 @end

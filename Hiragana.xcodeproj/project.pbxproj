@@ -18,13 +18,16 @@
 		EEB3DE681B5F1AF2001FDEF4 /* あ.gif in Resources */ = {isa = PBXBuildFile; fileRef = EEB3DE671B5F1AF2001FDEF4 /* あ.gif */; };
 		EEB3DE6C1B5F23AD001FDEF4 /* NSArray+Hiragana.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3DE6B1B5F23AD001FDEF4 /* NSArray+Hiragana.m */; };
 		EEB3DE6E1B5F2980001FDEF4 /* い.gif in Resources */ = {isa = PBXBuildFile; fileRef = EEB3DE6D1B5F2980001FDEF4 /* い.gif */; };
-		EEB3DE711B5F5035001FDEF4 /* TABCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3DE701B5F5035001FDEF4 /* TABCollectionViewCell.m */; };
-		EEB3DE751B5F57AA001FDEF4 /* PunchedLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3DE741B5F57AA001FDEF4 /* PunchedLayout.m */; };
 		EEB3DE771B5F64DB001FDEF4 /* う.gif in Resources */ = {isa = PBXBuildFile; fileRef = EEB3DE761B5F64DB001FDEF4 /* う.gif */; };
 		EEB3DE791B5F651F001FDEF4 /* え.gif in Resources */ = {isa = PBXBuildFile; fileRef = EEB3DE781B5F651F001FDEF4 /* え.gif */; };
 		EEB3DE7B1B5F6573001FDEF4 /* お.gif in Resources */ = {isa = PBXBuildFile; fileRef = EEB3DE7A1B5F6573001FDEF4 /* お.gif */; };
 		EEB3DE7E1B600610001FDEF4 /* TABDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3DE7D1B600610001FDEF4 /* TABDrawingView.m */; };
 		EEB3DE811B600814001FDEF4 /* TABLine.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3DE801B600814001FDEF4 /* TABLine.m */; };
+		EEB3DE831B6024FB001FDEF4 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = EEB3DE821B6024FB001FDEF4 /* Sounds */; };
+		EEB3DE861B603966001FDEF4 /* TABSymbolView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3DE851B603966001FDEF4 /* TABSymbolView.m */; };
+		EEB3DE891B605C91001FDEF4 /* UIColor+ApplicationColors.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3DE881B605C91001FDEF4 /* UIColor+ApplicationColors.m */; };
+		EEB3DEC11B60A20A001FDEF4 /* TABPullingBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3DEC01B60A20A001FDEF4 /* TABPullingBehavior.m */; };
+		EEB3DEC41B60A72A001FDEF4 /* TABDraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3DEC31B60A72A001FDEF4 /* TABDraggableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +61,7 @@
 		EEB3DE6A1B5F23AD001FDEF4 /* NSArray+Hiragana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Hiragana.h"; sourceTree = "<group>"; };
 		EEB3DE6B1B5F23AD001FDEF4 /* NSArray+Hiragana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Hiragana.m"; sourceTree = "<group>"; };
 		EEB3DE6D1B5F2980001FDEF4 /* い.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "い.gif"; sourceTree = "<group>"; };
-		EEB3DE6F1B5F5035001FDEF4 /* TABCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TABCollectionViewCell.h; sourceTree = "<group>"; };
-		EEB3DE701B5F5035001FDEF4 /* TABCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TABCollectionViewCell.m; sourceTree = "<group>"; };
 		EEB3DE721B5F52D7001FDEF4 /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
-		EEB3DE731B5F57AA001FDEF4 /* PunchedLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PunchedLayout.h; sourceTree = "<group>"; };
-		EEB3DE741B5F57AA001FDEF4 /* PunchedLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PunchedLayout.m; sourceTree = "<group>"; };
 		EEB3DE761B5F64DB001FDEF4 /* う.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "う.gif"; sourceTree = "<group>"; };
 		EEB3DE781B5F651F001FDEF4 /* え.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "え.gif"; sourceTree = "<group>"; };
 		EEB3DE7A1B5F6573001FDEF4 /* お.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "お.gif"; sourceTree = "<group>"; };
@@ -70,6 +69,15 @@
 		EEB3DE7D1B600610001FDEF4 /* TABDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TABDrawingView.m; sourceTree = "<group>"; };
 		EEB3DE7F1B600814001FDEF4 /* TABLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TABLine.h; sourceTree = "<group>"; };
 		EEB3DE801B600814001FDEF4 /* TABLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TABLine.m; sourceTree = "<group>"; };
+		EEB3DE821B6024FB001FDEF4 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		EEB3DE841B603966001FDEF4 /* TABSymbolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TABSymbolView.h; sourceTree = "<group>"; };
+		EEB3DE851B603966001FDEF4 /* TABSymbolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TABSymbolView.m; sourceTree = "<group>"; };
+		EEB3DE871B605C91001FDEF4 /* UIColor+ApplicationColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ApplicationColors.h"; sourceTree = "<group>"; };
+		EEB3DE881B605C91001FDEF4 /* UIColor+ApplicationColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ApplicationColors.m"; sourceTree = "<group>"; };
+		EEB3DEBF1B60A20A001FDEF4 /* TABPullingBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TABPullingBehavior.h; sourceTree = "<group>"; };
+		EEB3DEC01B60A20A001FDEF4 /* TABPullingBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TABPullingBehavior.m; sourceTree = "<group>"; };
+		EEB3DEC21B60A72A001FDEF4 /* TABDraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TABDraggableView.h; sourceTree = "<group>"; };
+		EEB3DEC31B60A72A001FDEF4 /* TABDraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TABDraggableView.m; sourceTree = "<group>"; };
 		F733139D47C922C87CBB3740 /* libPods-Hiragana.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hiragana.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,20 +144,25 @@
 				EEB3DE411B5F0F10001FDEF4 /* AppDelegate.m */,
 				EEB3DE621B5F0FCC001FDEF4 /* TABSymbol.h */,
 				EEB3DE631B5F0FCC001FDEF4 /* TABSymbol.m */,
-				EEB3DE731B5F57AA001FDEF4 /* PunchedLayout.h */,
-				EEB3DE741B5F57AA001FDEF4 /* PunchedLayout.m */,
 				EEB3DE431B5F0F10001FDEF4 /* ViewController.h */,
 				EEB3DE441B5F0F10001FDEF4 /* ViewController.m */,
-				EEB3DE6F1B5F5035001FDEF4 /* TABCollectionViewCell.h */,
-				EEB3DE701B5F5035001FDEF4 /* TABCollectionViewCell.m */,
 				EEB3DE6A1B5F23AD001FDEF4 /* NSArray+Hiragana.h */,
 				EEB3DE6B1B5F23AD001FDEF4 /* NSArray+Hiragana.m */,
 				EEB3DE7C1B600610001FDEF4 /* TABDrawingView.h */,
 				EEB3DE7D1B600610001FDEF4 /* TABDrawingView.m */,
 				EEB3DE7F1B600814001FDEF4 /* TABLine.h */,
 				EEB3DE801B600814001FDEF4 /* TABLine.m */,
+				EEB3DE841B603966001FDEF4 /* TABSymbolView.h */,
+				EEB3DE851B603966001FDEF4 /* TABSymbolView.m */,
+				EEB3DE871B605C91001FDEF4 /* UIColor+ApplicationColors.h */,
+				EEB3DE881B605C91001FDEF4 /* UIColor+ApplicationColors.m */,
+				EEB3DEBF1B60A20A001FDEF4 /* TABPullingBehavior.h */,
+				EEB3DEC01B60A20A001FDEF4 /* TABPullingBehavior.m */,
+				EEB3DEC21B60A72A001FDEF4 /* TABDraggableView.h */,
+				EEB3DEC31B60A72A001FDEF4 /* TABDraggableView.m */,
 				EEB3DE721B5F52D7001FDEF4 /* Utility.h */,
 				EEB3DE691B5F22B6001FDEF4 /* Gifs */,
+				EEB3DE821B6024FB001FDEF4 /* Sounds */,
 				EEB3DE491B5F0F10001FDEF4 /* Images.xcassets */,
 				EEB3DE4B1B5F0F10001FDEF4 /* LaunchScreen.xib */,
 				EEB3DE3C1B5F0F10001FDEF4 /* Supporting Files */,
@@ -279,6 +292,7 @@
 			files = (
 				EEB3DE6E1B5F2980001FDEF4 /* い.gif in Resources */,
 				EEB3DE4D1B5F0F10001FDEF4 /* LaunchScreen.xib in Resources */,
+				EEB3DE831B6024FB001FDEF4 /* Sounds in Resources */,
 				EEB3DE771B5F64DB001FDEF4 /* う.gif in Resources */,
 				EEB3DE791B5F651F001FDEF4 /* え.gif in Resources */,
 				EEB3DE4A1B5F0F10001FDEF4 /* Images.xcassets in Resources */,
@@ -335,14 +349,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEB3DE451B5F0F10001FDEF4 /* ViewController.m in Sources */,
+				EEB3DEC41B60A72A001FDEF4 /* TABDraggableView.m in Sources */,
 				EEB3DE7E1B600610001FDEF4 /* TABDrawingView.m in Sources */,
+				EEB3DE861B603966001FDEF4 /* TABSymbolView.m in Sources */,
 				EEB3DE421B5F0F10001FDEF4 /* AppDelegate.m in Sources */,
 				EEB3DE3F1B5F0F10001FDEF4 /* main.m in Sources */,
 				EEB3DE811B600814001FDEF4 /* TABLine.m in Sources */,
+				EEB3DE891B605C91001FDEF4 /* UIColor+ApplicationColors.m in Sources */,
 				EEB3DE641B5F0FCC001FDEF4 /* TABSymbol.m in Sources */,
-				EEB3DE751B5F57AA001FDEF4 /* PunchedLayout.m in Sources */,
-				EEB3DE711B5F5035001FDEF4 /* TABCollectionViewCell.m in Sources */,
 				EEB3DE6C1B5F23AD001FDEF4 /* NSArray+Hiragana.m in Sources */,
+				EEB3DEC11B60A20A001FDEF4 /* TABPullingBehavior.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

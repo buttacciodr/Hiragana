@@ -10,4 +10,7 @@
 
 @interface TABDrawingView : UIView
 
+// Show near the top of the drawing view
+@property (strong, nonatomic, readonly) UILabel *drawingLabel;
+
 @end

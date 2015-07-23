@@ -5,7 +5,6 @@
 
 @property (nonatomic, strong) TABLine *currentLine;
 @property (nonatomic, strong) NSMutableArray *finishedLines;
-
 @property (nonatomic, strong) UIButton *clearButton;
 
 @end
@@ -22,7 +21,9 @@
             [button addTarget:self action:@selector(clearButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
             button.frame = CGRectMake(0, 0, 50, 50);
             button.backgroundColor = [UIColor whiteColor];
-            button.titleLabel.text = @"Clear";
+            [button setImage:[UIImage imageNamed:@"trash"] forState:UIControlStateNormal];
+            [button.layer setCornerRadius:25.0f];
+            [button.layer setMasksToBounds:YES];
             button;
         });
         
@@ -47,7 +48,7 @@
 -(void)strokeLine:(TABLine *)line
 {
     UIBezierPath *bp = [UIBezierPath bezierPath];
-    bp.lineWidth = 10.0f;
+    bp.lineWidth = 20.0f;
     bp.lineCapStyle = kCGLineCapRound;
     
     [bp moveToPoint:line.begin];
@@ -75,6 +76,8 @@
     UITouch *touch= [touches anyObject];
     CGPoint location = [touch locationInView:self];
     self.currentLine.end = location;
+    
+    
     [self.finishedLines addObject:self.currentLine];
     
     //Start New Line

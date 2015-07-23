@@ -23,6 +23,7 @@
     ViewController *VC = [[ViewController alloc] init];
     self.window.rootViewController = VC;
     [self.window makeKeyAndVisible];
+    [UIApplication sharedApplication].statusBarHidden = YES;
     
     return YES;
 }
