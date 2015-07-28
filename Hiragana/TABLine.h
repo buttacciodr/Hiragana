@@ -8,7 +8,11 @@
 
 @import UIKit;
 
-@interface TABLine : NSObject
+@interface TABLine : NSObject <UIDynamicItem>
+
+@property (nonatomic) CGRect bounds;
+@property (nonatomic) CGPoint center;
+@property (nonatomic) CGAffineTransform transform;
 
 @property (nonatomic) CGPoint begin;
 @property (nonatomic) CGPoint end;

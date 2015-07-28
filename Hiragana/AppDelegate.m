@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "NSArray+Hiragana.h"
+#import "TABSymbol.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    ViewController *VC = [[ViewController alloc] init];
+    ViewController *VC = [[ViewController alloc] initWithSymbols:[TABSymbol createTABSymbolsFromCharacterList:[NSArray tab_hiraganaSymbols]]];
     self.window.rootViewController = VC;
     [self.window makeKeyAndVisible];
     [UIApplication sharedApplication].statusBarHidden = YES;

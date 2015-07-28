@@ -10,8 +10,7 @@
 
 @implementation NSArray (Hiragana)
 
-+(NSArray *) tab_hiraganaSymbols
-{
++(NSArray *) tab_hiraganaSymbols {
     return @[@"あ", @"い", @"う", @"え", @"お"];
 }
 

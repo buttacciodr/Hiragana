@@ -10,4 +10,13 @@
 
 @implementation TABLine
 
+
+-(void)setCenter:(CGPoint)center {
+    _center = center;
+}
+
+-(void)setBounds:(CGRect)bounds {
+    
+}
+
 @end

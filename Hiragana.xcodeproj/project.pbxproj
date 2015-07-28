@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		773749256C82AB162D562889 /* libPods-Hiragana.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F733139D47C922C87CBB3740 /* libPods-Hiragana.a */; };
+		EE70A5E31B669E4A00A3BD63 /* TABControlPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE70A5E21B669E4A00A3BD63 /* TABControlPanelView.m */; };
+		EE70A5E91B67382200A3BD63 /* NSString+Hiragana.m in Sources */ = {isa = PBXBuildFile; fileRef = EE70A5E81B67382200A3BD63 /* NSString+Hiragana.m */; };
 		EEB3DE3F1B5F0F10001FDEF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3DE3E1B5F0F10001FDEF4 /* main.m */; };
 		EEB3DE421B5F0F10001FDEF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3DE411B5F0F10001FDEF4 /* AppDelegate.m */; };
 		EEB3DE451B5F0F10001FDEF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB3DE441B5F0F10001FDEF4 /* ViewController.m */; };
@@ -43,6 +45,10 @@
 /* Begin PBXFileReference section */
 		13579DBF2D3EA9C8CDF7721A /* Pods-Hiragana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hiragana.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hiragana/Pods-Hiragana.debug.xcconfig"; sourceTree = "<group>"; };
 		1B40C437A2C0709C65F7DDA0 /* Pods-Hiragana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hiragana.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hiragana/Pods-Hiragana.release.xcconfig"; sourceTree = "<group>"; };
+		EE70A5E11B669E4A00A3BD63 /* TABControlPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TABControlPanelView.h; sourceTree = "<group>"; };
+		EE70A5E21B669E4A00A3BD63 /* TABControlPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TABControlPanelView.m; sourceTree = "<group>"; };
+		EE70A5E71B67382200A3BD63 /* NSString+Hiragana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hiragana.h"; sourceTree = "<group>"; };
+		EE70A5E81B67382200A3BD63 /* NSString+Hiragana.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hiragana.m"; sourceTree = "<group>"; };
 		EEB3DE391B5F0F10001FDEF4 /* Hiragana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hiragana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEB3DE3D1B5F0F10001FDEF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEB3DE3E1B5F0F10001FDEF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -148,6 +154,8 @@
 				EEB3DE441B5F0F10001FDEF4 /* ViewController.m */,
 				EEB3DE6A1B5F23AD001FDEF4 /* NSArray+Hiragana.h */,
 				EEB3DE6B1B5F23AD001FDEF4 /* NSArray+Hiragana.m */,
+				EE70A5E71B67382200A3BD63 /* NSString+Hiragana.h */,
+				EE70A5E81B67382200A3BD63 /* NSString+Hiragana.m */,
 				EEB3DE7C1B600610001FDEF4 /* TABDrawingView.h */,
 				EEB3DE7D1B600610001FDEF4 /* TABDrawingView.m */,
 				EEB3DE7F1B600814001FDEF4 /* TABLine.h */,
@@ -160,6 +168,8 @@
 				EEB3DEC01B60A20A001FDEF4 /* TABPullingBehavior.m */,
 				EEB3DEC21B60A72A001FDEF4 /* TABDraggableView.h */,
 				EEB3DEC31B60A72A001FDEF4 /* TABDraggableView.m */,
+				EE70A5E11B669E4A00A3BD63 /* TABControlPanelView.h */,
+				EE70A5E21B669E4A00A3BD63 /* TABControlPanelView.m */,
 				EEB3DE721B5F52D7001FDEF4 /* Utility.h */,
 				EEB3DE691B5F22B6001FDEF4 /* Gifs */,
 				EEB3DE821B6024FB001FDEF4 /* Sounds */,
@@ -351,6 +361,7 @@
 				EEB3DE451B5F0F10001FDEF4 /* ViewController.m in Sources */,
 				EEB3DEC41B60A72A001FDEF4 /* TABDraggableView.m in Sources */,
 				EEB3DE7E1B600610001FDEF4 /* TABDrawingView.m in Sources */,
+				EE70A5E91B67382200A3BD63 /* NSString+Hiragana.m in Sources */,
 				EEB3DE861B603966001FDEF4 /* TABSymbolView.m in Sources */,
 				EEB3DE421B5F0F10001FDEF4 /* AppDelegate.m in Sources */,
 				EEB3DE3F1B5F0F10001FDEF4 /* main.m in Sources */,
@@ -359,6 +370,7 @@
 				EEB3DE641B5F0FCC001FDEF4 /* TABSymbol.m in Sources */,
 				EEB3DE6C1B5F23AD001FDEF4 /* NSArray+Hiragana.m in Sources */,
 				EEB3DEC11B60A20A001FDEF4 /* TABPullingBehavior.m in Sources */,
+				EE70A5E31B669E4A00A3BD63 /* TABControlPanelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

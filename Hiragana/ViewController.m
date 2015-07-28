@@ -5,24 +5,19 @@
 #import "Utility.h"
 #import "TABDrawingView.h"
 #import "TABSymbolView.h"
-#import "TABDraggableView.h"
-
-#import "TABPullingBehavior.h"
+#import "TABControlPanelView.h"
 
 @import AVFoundation;
 #import <FLAnimatedImage/FLAnimatedImage.h>
 
-@interface ViewController () <UIScrollViewDelegate>
+@interface ViewController () <UIScrollViewDelegate, TABControlPanelViewDelegate, TABDrawingViewDelegate>
 
+@property (strong, nonatomic) NSArray *symbols;
 @property (strong, nonatomic) TABDrawingView *drawingView;
-@property (strong, nonatomic) NSMutableDictionary *symbols;
-@property (strong, nonatomic) UIDynamicAnimator *animator;
-
-//Playing With ScrollView
+@property (strong, nonatomic) TABControlPanelView *controlPanel;
 @property (strong, nonatomic) UIScrollView *scrollView;
-@property (strong, nonatomic) NSMutableArray *symbolViews;
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
-@property (strong, nonatomic) TABDraggableView *draggableView;
+@property (strong, nonatomic) NSMutableArray *symbolViews;
 
 @end
 
@@ -30,9 +25,13 @@
 
 static NSString *const reuseIdentifier = @"reuseIdentifier";
 
--(instancetype) init
+#pragma mark - Lifecycle
+
+-(instancetype) initWithSymbols:(NSArray *)symbols
 {
     if (self = [super init]) {
+        
+        _symbols = symbols;
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollViewTapped:)];
         _scrollView = ({
@@ -40,6 +39,7 @@ static NSString *const reuseIdentifier = @"reuseIdentifier";
             scrollView.pagingEnabled = YES;
             scrollView.delegate = self;
             scrollView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5f];
+            scrollView.showsHorizontalScrollIndicator = NO;
             scrollView;
         });
         [_scrollView addGestureRecognizer:tap];
@@ -47,22 +47,20 @@ static NSString *const reuseIdentifier = @"reuseIdentifier";
         _drawingView = ({
             TABDrawingView *drawingView = [[TABDrawingView alloc] initWithFrame:CGRectZero];
             drawingView.backgroundColor = [UIColor tab_applicationColorYellow];
-            [drawingView.layer setBorderColor:[UIColor tab_applicationColorRed].CGColor];
-            [drawingView.layer setBorderWidth:5.0f];
             drawingView;
         });
         
-        for (UIView *view in @[ _scrollView, _drawingView]) {
-            view.userInteractionEnabled = YES;
+        _controlPanel = ({
+            TABControlPanelView *control = [[TABControlPanelView alloc] initWithFrame:CGRectZero];
+            control.backgroundColor = [UIColor tab_applicationColorRed];
+            control.delegate = self;
+            control;
+        });
+        
+        for (UIView *view in @[ _scrollView, _controlPanel, _drawingView]) {
             view.translatesAutoresizingMaskIntoConstraints = NO;
-            [self.view bringSubviewToFront:view];
             [self.view addSubview:view];
         }
-        
-        _animator = ({
-            UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
-            animator;
-        });
     }
     return self;
 }
@@ -70,53 +68,27 @@ static NSString *const reuseIdentifier = @"reuseIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    for (int i = 0; i < [[NSArray tab_hiraganaSymbols] count]; i++) {
-        NSString *letter = [NSArray tab_hiraganaSymbols][i];
-        
-        TABSymbol *symbol = [self.symbols objectForKey:letter];
-        if (!symbol) {
-            symbol = [[TABSymbol alloc] initWithSymbol:letter];
-            [self.symbols setObject:symbol forKey:letter];
-        }
-        
-        FLAnimatedImageView *animatedView = [[FLAnimatedImageView alloc] init];
-        animatedView.animationDuration = 10.0f;
-        animatedView.animatedImage = [[FLAnimatedImage alloc] initWithAnimatedGIFData:[NSData dataWithContentsOfFile:symbol.gifPath]];
-        [self.scrollView addSubview:animatedView];
-        [self.symbolViews addObject:animatedView];
-        
-        CGFloat viewWidth = CGRectGetWidth(self.view.frame);
-        CGFloat viewHeight = CGRectGetHeight(self.view.frame);
-        
-        animatedView.frame = CGRectMake(viewWidth * i, 0, viewWidth, viewHeight/3.0);
-    }
+    CGFloat viewWidth = CGRectGetWidth(self.view.frame);
+    CGFloat viewHeight = CGRectGetHeight(self.view.frame);
+    
+    [self.symbols enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        TABSymbol *symbol = (TABSymbol *)obj;
+        TABSymbolView *symbolView = [[TABSymbolView alloc] initWithFrame:CGRectMake(idx * viewWidth, 0, viewWidth, viewHeight/3.0)];
+        symbolView.image = [[FLAnimatedImage alloc] initWithAnimatedGIFData:[NSData dataWithContentsOfFile:symbol.gifPath]];
+        symbolView.romanLetterLabel.text = symbol.letter;
+        symbolView.symbolLabel.text = symbol.symbol;
+        [self.symbolViews addObject:symbolView];
+        [self.scrollView addSubview:symbolView];
+    }];
 }
 
 -(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    for (FLAnimatedImageView *view in self.symbolViews) {
-        [view stopAnimating];
+    
+    for (TABSymbolView *view in self.symbolViews) {
+        [view.imageView stopAnimating];
     }
-    
-    //Testing
-    CGFloat viewWidth = CGRectGetWidth(self.view.frame);
-    CGFloat viewHeight = CGRectGetHeight(self.view.frame);
-    UIButton *headphones = [UIButton buttonWithType:UIButtonTypeCustom];
-    [headphones setImage:[UIImage imageNamed:@"headphones"] forState:UIControlStateNormal];
-    [headphones addTarget:self action:@selector(playButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    headphones.frame = CGRectMake(viewWidth - 35, viewHeight/3.0 - 35, 35, 35);
-    [self.view addSubview:headphones];
-    
-    TABPullingBehavior *pullingBehavior = ({
-        TABPullingBehavior *behavior = [[TABPullingBehavior alloc] initWithItem:headphones];
-        behavior.targetPoint = CGPointMake(viewWidth - 35, viewHeight/3.0 - 35);
-        behavior.velocity = CGPointZero;
-        behavior;
-    });
-    
-    [self.animator addBehavior:pullingBehavior];
-    
 }
 
 -(void) viewDidLayoutSubviews
@@ -125,14 +97,19 @@ static NSString *const reuseIdentifier = @"reuseIdentifier";
     
     CGFloat viewWidth = CGRectGetWidth(self.view.frame);
     CGFloat viewHeight = CGRectGetHeight(self.view.frame);
+    CGFloat controlPanelHeight = 54.0f;
     
     CONSTRAIN_HEIGHT(self.scrollView, viewHeight/3.0);
     CONSTRAIN_WIDTH(self.scrollView, viewWidth);
     ALIGN_VIEW_TOP(self.view, self.scrollView);
+    self.scrollView.contentSize = CGSizeMake(viewWidth*(self.symbols.count), viewHeight/3.0);
     
-    self.scrollView.contentSize = CGSizeMake(viewWidth*5.0, viewHeight/3.0);
+    CONSTRAIN_HEIGHT(self.controlPanel, controlPanelHeight);
+    CONSTRAIN_WIDTH(self.controlPanel, viewWidth);
+    ALIGN_VIEW_TOP_CONSTANT(self.view, self.controlPanel, viewHeight/3.0);
+    ALIGN_VIEW_LEFT(self.view, self.controlPanel);
     
-    CONSTRAIN_HEIGHT(self.drawingView, viewHeight * (2/3.0f));
+    CONSTRAIN_HEIGHT(self.drawingView, viewHeight * (2/3.0f) - controlPanelHeight);
     CONSTRAIN_WIDTH(self.drawingView, viewWidth);
     ALIGN_VIEW_BOTTOM(self.view, self.drawingView);
 }
@@ -148,14 +125,20 @@ static NSString *const reuseIdentifier = @"reuseIdentifier";
     CGFloat viewWidth = CGRectGetWidth(self.view.frame);
     NSUInteger viewIndex = ceilf(touchPoint.x/viewWidth) - 1;
     
-    FLAnimatedImageView *imageView = [self.symbolViews objectAtIndex:viewIndex];
-    if (imageView.isAnimating) [imageView stopAnimating];
-    else [imageView startAnimating];
+    TABSymbolView *symbolView = [self.symbolViews objectAtIndex:viewIndex];
+    if (symbolView.imageView.isAnimating) [symbolView.imageView stopAnimating];
+    else [symbolView.imageView startAnimating];
 }
 
--(void)playButtonPressed:(UIButton *)sender {
+#pragma mark - TABControlPanelView Delegate
+
+-(void)ControlPanelView:(TABControlPanelView *)view didPressPlayButton:(UIButton *)sender {
+    [self animateButtonPush:sender];
     
-    TABSymbol *symbol = [self.symbols objectForKey:[NSArray tab_hiraganaSymbols][1]];
+    CGPoint contentOffset = self.scrollView.contentOffset;
+    CGFloat viewWidth = CGRectGetWidth(self.view.frame);
+    NSUInteger viewIndex = (contentOffset.x/viewWidth);
+    TABSymbol *symbol = [self.symbols objectAtIndex:viewIndex];
     
     NSError *error;
     _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:symbol.audioURL fileTypeHint:AVFileTypeWAVE error:&error];
@@ -168,19 +151,52 @@ static NSString *const reuseIdentifier = @"reuseIdentifier";
     }
 }
 
+-(void) ControlPanelView:(TABControlPanelView *)view didPressNextButton:(UIButton *)sender {
+    CGPoint currentScrollViewOffset = self.scrollView.contentOffset;
+    CGFloat viewWidth = CGRectGetWidth(self.view.frame);
+    
+    [self animateButtonPush:sender];
+    
+    if ((currentScrollViewOffset.x/viewWidth) < [NSArray tab_hiraganaSymbols].count - 1) {
+        [UIView animateWithDuration:0.7f delay:0 usingSpringWithDamping:0.75 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            [self.scrollView setContentOffset:CGPointMake(currentScrollViewOffset.x+viewWidth, 0)];
+        } completion:nil];
+    } else {
+        [self.scrollView setContentOffset:CGPointMake(currentScrollViewOffset.x+25.0, 0)];
+        [UIView animateWithDuration:0.7f delay:0 usingSpringWithDamping:0.75 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            [self.scrollView setContentOffset:CGPointMake(currentScrollViewOffset.x, 0)];
+        } completion:nil];
+    }
+}
+
+-(void) ControlPanelView:(TABControlPanelView *)view didPressPreviousButton:(UIButton *)sender {
+    CGPoint currentScrollViewOffset = self.scrollView.contentOffset;
+    CGFloat viewWidth = CGRectGetWidth(self.view.frame);
+    
+    [self animateButtonPush:sender];
+    
+    if (currentScrollViewOffset.x != 0) {
+        [UIView animateWithDuration:0.7f delay:0 usingSpringWithDamping:0.75 initialSpringVelocity:1.2 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            [self.scrollView setContentOffset:CGPointMake(currentScrollViewOffset.x-viewWidth, 0)];
+        } completion:nil];
+    } else {
+        [self.scrollView setContentOffset:CGPointMake(-25.0, 0)];
+        [UIView animateWithDuration:0.7f delay:0 usingSpringWithDamping:0.75 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+            [self.scrollView setContentOffset:CGPointMake(0, 0)];
+        } completion:nil];
+    }
+}
+
+-(void) animateButtonPush:(UIButton *)sender {
+    sender.transform = CGAffineTransformMakeScale(0.7, 0.7);
+    [UIView animateWithDuration:0.7f delay:0 usingSpringWithDamping:0.75 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        sender.transform = CGAffineTransformMakeScale(1.0, 1.0);
+    } completion:nil];
+}
 
 #pragma mark - Lazy Instantiation
 
--(NSMutableDictionary *)symbols
-{
-    if (!_symbols) {
-        _symbols = [[NSMutableDictionary alloc] init];
-    }
-    return _symbols;
-}
-
--(NSMutableArray *)symbolViews
-{
+-(NSMutableArray *)symbolViews {
     if (!_symbolViews) {
         _symbolViews = [[NSMutableArray alloc] init];
     }

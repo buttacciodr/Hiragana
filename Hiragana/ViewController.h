@@ -10,5 +10,8 @@
 
 @interface ViewController : UIViewController
 
+
+-(instancetype) initWithSymbols:(NSArray *)symbols; //Array of TABSymbols
+
 @end
 
